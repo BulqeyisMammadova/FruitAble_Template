@@ -1,11 +1,11 @@
-﻿<!-- Hero Start -->
+﻿@model SliderVMVC
 <div class="container-fluid py-5 mb-5 hero-header">
     <div class="container py-5">
         <div class="row g-5 align-items-center">
             <div class="col-md-12 col-lg-7">
-                <h4 class="mb-3 text-secondary">100% Organic Foods</h4>
+                <h4 class="mb-3 text-secondary">@Model.SliderInfo.Title</h4>
                 <h1 class="mb-5 display-3 text-primary">
-                    Organic Veggies & Fruits Foods
+                    @Model.SliderInfo.Description
                 </h1>
                 <div class="position-relative mx-auto">
                     <input class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill"
@@ -23,18 +23,25 @@
                      class="carousel slide position-relative"
                      data-bs-ride="carousel">
                     <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active rounded">
-                            <img src="~/assets/img/hero-img-1.png"
-                                 class="img-fluid w-100 h-100 bg-secondary rounded"
-                                 alt="First slide" />
-                            <a href="#" class="btn px-4 py-2 text-white rounded">Fruites</a>
-                        </div>
-                        <div class="carousel-item rounded">
-                            <img src="~/assets/img/hero-img-2.jpg"
-                                 class="img-fluid w-100 h-100 rounded"
-                                 alt="Second slide" />
-                            <a href="#" class="btn px-4 py-2 text-white rounded">Vesitables</a>
-                        </div>
+                        @{
+                            bool isActive = true;
+                        }
+
+                        @foreach (var item in Model.Sliders)
+                        {
+                            <div class="carousel-item @(isActive ? "active" : "") rounded">
+                                <img src="~/assets/img/@item.Image"
+                                     class="img-fluid w-100 h-100 bg-secondary rounded"
+                                     alt="slide" />
+                                <a href="#" class="btn px-4 py-2 text-white rounded">
+                                    @item.Title
+                                </a>
+                            </div>
+
+                            isActive = false;
+                        }
+
+
                     </div>
                     <button class="carousel-control-prev"
                             type="button"

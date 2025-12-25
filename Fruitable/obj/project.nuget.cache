@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l3FOrMqvxyM=",
+  "dgSpecHash": "eGBxRJcCUmo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Balqeyis\\Desktop\\Fruitable\\Fruitable\\Fruitable.csproj",
+  "projectFilePath": "C:\\Users\\Balqeyis\\Desktop\\FruitsAbleTemplate\\Fruitable\\Fruitable\\Fruitable.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Balqeyis\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Balqeyis\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
@@ -81,5 +81,15 @@
     "C:\\Users\\Balqeyis\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\Balqeyis\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "projectPath": "C:\\Users\\Balqeyis\\Desktop\\FruitsAbleTemplate\\Fruitable\\Fruitable\\Fruitable.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Balqeyis\\Desktop\\FruitsAbleTemplate\\Fruitable\\Fruitable\\Fruitable.csproj",
+      "targetGraphs": []
+    }
+  ]
 }
